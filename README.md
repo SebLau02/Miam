@@ -1,4 +1,4 @@
-Visualise le site ici: https://seblau02.github.io/miam/accueil
+Visualise le site ici: https://seblau02.github.io/miam/
 
 Voici un site de commande pour un restaurant, le client commande et paye sur son téléphone, ensuite la commande est envoyé au restaurateur, le restaaurateur pourra visualiser toutes les commandes puis les valider une fois servie.
 
@@ -10,4 +10,4 @@ Here's a website for ordering food from a restaurant. The customer can order and
 
 The admin parts are normally reserved for an admin, but in order for you to access the entire site, the admin mode is disabled. However, on a production site, the admin section would be inaccessible to customers. 
 
-To view the site, please visit: https://seblau02.github.io/miam/accueil
+To view the site, please visit: https://seblau02.github.io/miam/

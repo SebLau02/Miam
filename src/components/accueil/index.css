@@ -1,0 +1,36 @@
+.categories {
+	width: 20vmax;
+}
+.inactive {
+	width: 3vmax;
+}
+.categories.active {
+	width: 80vmax;
+}
+
+.categories-title.active {
+	flex-direction: row;
+	transform: translate(-50%, 0%);
+}
+.categories-title {
+	flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+	.categories {
+		height: 20vh;
+	}
+	.inactive {
+		height: 3vh;
+	}
+	.categories.active {
+		min-height: 60vh;
+		height: auto;
+		width: 80%;
+	}
+
+	.categories-title.active {
+		flex-direction: row;
+		transform: translate(-50%, 100%);
+	}
+}

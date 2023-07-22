@@ -1,0 +1,26 @@
+.loader-container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@keyframes translate {
+	to {
+		stroke-dashoffset: 244.35121154785156px;
+	}
+}
+.loader {
+	background: red;
+}
+svg {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.move {
+	stroke-dasharray: 40px;
+	animation: translate 2s ease-out infinite;
+}

@@ -16,7 +16,7 @@ const GlobalContainer = styled.article`
 		flex-direction: column;
 
 		section {
-			width: 80%;
+			width: 90%;
 			height: 20vh;
 			transition: height 0.5s ease;
 		}
@@ -33,7 +33,7 @@ const GlobalContainer = styled.article`
 		section div {
 			grid-template-columns: 1fr 2fr 2fr;
 			grid-template-rows: repeat(2, auto);
-			grid-gap: 1vmax;
+			grid-gap: 0.5vmax;
 			width: 90%;
 
 			& :nth-child(2) {
@@ -43,6 +43,12 @@ const GlobalContainer = styled.article`
 			& :nth-child(4) {
 				grid-row: span 2;
 			}
+		}
+
+		section div button {
+			font-size: 3vw;
+			width: 6vmax;
+			height: 4vmax;
 		}
 	}
 `;
@@ -86,12 +92,8 @@ const MealsSections = styled.section`
 
 	div img {
 		width: 60%;
-		height: 100%;
+		height: 80%;
 		object-fit: contain;
-		align-self: center;
-	}
-	div button {
-		align-self: end;
 	}
 `;
 const Title = styled.h1`

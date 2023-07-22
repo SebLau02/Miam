@@ -9,6 +9,7 @@ import GetOrders from "./components/admin/orders/getOrders";
 import Admin from "./components/admin";
 import OrderDetail from "./components/admin/orders/getOrders/orderDetail";
 import GetServedOrders from "./components/admin/orders/getServedOrders";
+import Loader from "./components/loader";
 
 import apiUrl from "./utils/apiUrl";
 import { UserProvider } from "./utils/context";
@@ -40,7 +41,7 @@ function App() {
       <NavBar />
 
       {isLoading ? (
-        <p>Loading</p>
+        <Loader />
       ) : (
         <>
           <Routes>

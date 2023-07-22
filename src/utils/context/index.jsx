@@ -7,7 +7,7 @@ export const UserProvider = ({ children }) => {
 	const [orders, setOrders] = useState();
 	const [isLoadind, setIsLoading] = useState(true);
 
-	const getOrdersFunc = () => {
+	useEffect(() => {
 		fetch(apiUrl + `/miam/order/get-orders`, {
 			method: "get",
 			headers: {
@@ -20,11 +20,7 @@ export const UserProvider = ({ children }) => {
 				setIsLoading(false);
 			})
 			.catch((error) => console.error(error));
-	};
-
-	setInterval(() => {
-		getOrdersFunc();
-	}, 60000);
+	}, []);
 
 	return (
 		<UserContext.Provider value={{ orders, setOrders, isLoadind }}>

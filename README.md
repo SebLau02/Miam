@@ -25,7 +25,7 @@ To view the site, click [here](https://seblau02.github.io/miam/)
 ### Technologies: React, Node.JS
 
 ### Images:
-<img src="src/utils/images/illustration/miam1-3.png" alt="accueil" width="500">
+<img src="src/utils/images/illustration/miam1-3.png" alt="accueil" width="800">
 
 ![accueil](src/utils/images/illustration/miam1-3.png)
 ![accueil](src/utils/images/illustration/miam2-3.png)

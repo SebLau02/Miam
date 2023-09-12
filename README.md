@@ -26,6 +26,6 @@ To view the site, click [here](https://seblau02.github.io/miam/)
 
 ### Images:
 
-![accueil](utils/images/illustration/miam1-3.png)
-![accueil](utils/images/illustration/miam2-3.png)
-![accueil](utils/images/illustration/miam3-3.png)
+![accueil](src/utils/images/illustration/miam1-3.png)
+![accueil](src/utils/images/illustration/miam2-3.png)
+![accueil](src/utils/images/illustration/miam3-3.png)

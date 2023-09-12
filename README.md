@@ -6,7 +6,7 @@
 
 Site de commande pour restaurant.
 
-### Détail
+### Détails
 
 Voici un site de commande pour un restaurant, le client commande et paye sur son téléphone, ensuite la commande est envoyé au restaurateur, le restaurateur pourra visualiser toutes les commandes puis les valider une fois servie.
 

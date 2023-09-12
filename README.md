@@ -26,7 +26,5 @@ To view the site, click [here](https://seblau02.github.io/miam/)
 
 ### Images:
 <img src="src/utils/images/illustration/miam1-3.png" alt="accueil" width="800">
-
-![accueil](src/utils/images/illustration/miam1-3.png)
-![accueil](src/utils/images/illustration/miam2-3.png)
-![accueil](src/utils/images/illustration/miam3-3.png)
+<img src="src/utils/images/illustration/miam2-3.png" alt="panier" width="800">
+<img src="src/utils/images/illustration/miam3-3.png" alt="comandes en cours" width="800">

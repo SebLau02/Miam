@@ -1,8 +1,12 @@
-## Miam 
+## Miam
 
 ## Fr
 
-Visualise le site ici: 
+### Description
+
+Site de commande pour restaurant.
+
+### Détail
 
 Voici un site de commande pour un restaurant, le client commande et paye sur son téléphone, ensuite la commande est envoyé au restaurateur, le restaurateur pourra visualiser toutes les commandes puis les valider une fois servie.
 
@@ -14,6 +18,14 @@ Je te laisse le découvrire [ici](https://seblau02.github.io/miam/)
 
 Here's a website for ordering food from a restaurant. The customer can order and pay on their phone, and then the order is sent to the restaurant owner. The owner can view all orders and validate them once they've been served.
 
-The admin parts are normally reserved for an admin, but in order for you to access the entire site, the admin mode is disabled. However, if it was online admin parts will be activated. 
+The admin parts are normally reserved for an admin, but in order for you to access the entire site, the admin mode is disabled. However, if it was online admin parts will be activated.
 
 To view the site, click [here](https://seblau02.github.io/miam/)
+
+### Technologies: React, Node.JS
+
+### Images:
+
+![accueil](utils/images/illustration/miam1-3.png)
+![accueil](utils/images/illustration/miam2-3.png)
+![accueil](utils/images/illustration/miam3-3.png)

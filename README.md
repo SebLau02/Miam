@@ -26,7 +26,7 @@ Database is [here](https://github.com/SebLau02/miam-server) if you want to see i
 
 To view the site, click [here](https://seblau02.github.io/miam/)
 
-### Technologies: React, Node.JS
+### Technologies: React.Js, Node.JS
 
 ### Images:
 <img src="src/utils/images/illustration/miam1-3.png" alt="accueil" width="800">

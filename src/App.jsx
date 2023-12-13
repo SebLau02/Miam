@@ -46,7 +46,7 @@ function App() {
         <>
           <Routes>
             <Route
-              path="/accueil"
+              path="/"
               element={<Accueil meals={meals} setCart={setCart} cart={cart} />}
             />
             <Route

@@ -38,7 +38,7 @@ const ImageLink = styled(Link)`
 export default function NavBar() {
 	return (
 		<NavBarGlobalContainer>
-			<ImageLink to={`/accueil`}>
+			<ImageLink to={`/`}>
 				<Images src={M} alt="retour à l'accueil" />
 			</ImageLink>
 			<ImageLink to={`/cart`}>

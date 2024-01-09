@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import io from "socket.io-client";
+
 import apiUrl from "../../utils/apiUrl";
 
 import colors from "../../utils/style/colors";
 import Delete from "../../utils/images/delete.svg";
+
+const socket = io.connect(apiUrl);
 
 //-----------------------------------------------------------------------------------------------
 
@@ -14,23 +18,42 @@ const GlobalContainer = styled.article`
 	flex-direction: column;
 `;
 const Meals = styled.section`
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	display: grid;
+	grid-template-columns: 2fr 2fr 1fr;
 	width: 90%;
-	height: 5vmax;
+	height: auto;
 	padding: 1vmax;
 	margin: 0.5vmax;
-	border-radius: 1vmax;
+	border-radius: 0.5vmax;
 	background: ${colors.lightBlue};
 
+	* {
+		align-self: center;
+	}
+
+	& :nth-child(1) {
+		display: block;
+	}
+
 	& :nth-child(2) {
-		height: 150%;
+		height: 10vw;
+		min-height: 80px;
+		object-fit: cover;
+		justify-self: center;
 	}
 
 	& :nth-child(3) {
-		height: 60%;
+		height: 2vw;
+		min-height: 20px;
 		cursor: pointer;
+		justify-self: end;
+	}
+
+	@media (max-width: 425px) {
+		& :nth-child(2) {
+			max-width: 120px;
+			object-fit: cover;
+		}
 	}
 `;
 
@@ -52,22 +75,23 @@ const OrderSentSection = styled.div`
 `;
 
 const FormContainer = styled.div`
-	width: 50vmax;
+	// min-width: 250px;
 	background: ${colors.lightBlue};
 	border-radius: 1vmax;
 	padding: 1vmax;
 	margin: 1vmax;
 
-	form {
+	form label {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: start;
 		flex-direction: column;
 	}
 	form label input {
 		margin: 0 2vmax;
-		border-radius: 1vmax;
+		border-radius: 0.5vmax;
 		padding: 0.5vmax;
+		border: none;
 	}
 `;
 
@@ -92,6 +116,8 @@ export default function Cart({ cart, setCart }) {
 		clientName: pseudo,
 		tableNumber: tableNumber,
 		meals: serverCart,
+		order_id:
+			pseudo + tableNumber + (Math.floor(Math.random() * 801) + 100),
 	};
 
 	let newCart = [];
@@ -117,28 +143,30 @@ export default function Cart({ cart, setCart }) {
 	const orderSentFunc = () => {
 		setOrderSent(true);
 
-		fetch(apiUrl + `/miam/order`, {
-			method: "post",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(order),
-		})
-			.then((response) => response.json())
-			.then((data) => {
-				setServerRes(data.message);
-			})
-			.catch((error) => console.error(error));
+		// socket.emit("send_message", { order });
+
+		// fetch(apiUrl + `/miam/order`, {
+		// 	method: "post",
+		// 	headers: {
+		// 		"Content-Type": "application/json",
+		// 	},
+		// 	body: JSON.stringify(order),
+		// })
+		// 	.then((response) => response.json())
+		// 	.then((data) => {
+		// 		setServerRes(data.message);
+		// 	})
+		// 	.catch((error) => console.error(error));
 	};
 
 	return (
 		<GlobalContainer>
 			{cart.map((meal) => (
 				<Meals key={randomNumberFunc(meal._id)}>
-					<p>
+					<div>
 						<span>{meal.name} </span>
 						<span> {meal.price * 0.01}€</span>
-					</p>
+					</div>
 					<img src={meal.image} alt="plat" />
 					<img
 						src={Delete}

@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 const GlobalContainer = styled.article`
 	padding: 1vmax;
+
 	h1 {
 		text-decoration: underline;
 	}

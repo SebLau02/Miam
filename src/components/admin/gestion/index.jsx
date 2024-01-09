@@ -18,7 +18,6 @@ const ServerResponse = styled.h3`
 
 const GlobalContainer = styled.article`
 	margin: 2vmax;
-	height: 100%;
 
 	* {
 		margin: 0.5vmax 0;

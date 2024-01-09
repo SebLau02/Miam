@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useContext } from "react";
-import apiUrl from "../../../../utils/apiUrl";
-import styled from "styled-components";
-import colors from "../../../../utils/style/colors";
 import { useNavigate, Link } from "react-router-dom";
+import styled from "styled-components";
+
+import apiUrl from "../../../../utils/apiUrl";
+import colors from "../../../../utils/style/colors";
 import { UserContext } from "../../../../utils/context";
 
 //-----------------------------------------------------------------------------------------------
@@ -25,6 +26,9 @@ const StyledLink = styled(Link)`
 	text-decoration: none;
 	color: black;
 `;
+
+//-----------------------------------------------------------------------------------------------
+
 export default function GetOrders() {
 	const { orders, isLoadind } = useContext(UserContext);
 	const navigate = useNavigate();
@@ -33,14 +37,18 @@ export default function GetOrders() {
 		<OrdersBlobalSection>
 			<h3>Commandes en cours</h3>
 
-			{orders?.map((order) => (
-				<StyledLink to={`/admin/order_detail/${order._id}`}>
-					<OrderSection key={order._id}>
-						<p>Client: {order.clientName}</p>
-						<p>Table Number: {order.tableNumber}</p>
-					</OrderSection>
-				</StyledLink>
-			))}
+			{orders.length === 0 ? (
+				<p>Aucune</p>
+			) : (
+				orders?.map((order) => (
+					<StyledLink to={`/admin/order_detail/${order.order_id}`}>
+						<OrderSection key={order._id}>
+							<p>Client: {order.clientName}</p>
+							<p>Table : {order.tableNumber}</p>
+						</OrderSection>
+					</StyledLink>
+				))
+			)}
 		</OrdersBlobalSection>
 	);
 }

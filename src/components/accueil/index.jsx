@@ -175,7 +175,7 @@ export default function Accueil({ meals, cart, setCart }) {
 									Ajouter
 								</button>
 							</div>
-						)
+						),
 				)}
 			</MealsSections>
 
@@ -189,6 +189,7 @@ export default function Accueil({ meals, cart, setCart }) {
 				}
 				onClick={() => {
 					setIsActive(2);
+
 					if (isCategoryActive !== 2) {
 						setIsCategoryActive(0);
 						setTimeout(() => {
@@ -223,7 +224,7 @@ export default function Accueil({ meals, cart, setCart }) {
 									Ajouter
 								</button>
 							</div>
-						)
+						),
 				)}
 			</MealsSections>
 
@@ -274,7 +275,7 @@ export default function Accueil({ meals, cart, setCart }) {
 									Ajouter
 								</button>
 							</div>
-						)
+						),
 				)}
 			</MealsSections>
 			<MealsSections
@@ -324,7 +325,7 @@ export default function Accueil({ meals, cart, setCart }) {
 									Ajouter
 								</button>
 							</div>
-						)
+						),
 				)}
 			</MealsSections>
 		</GlobalContainer>

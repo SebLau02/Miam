@@ -46,7 +46,7 @@ function App() {
         <>
           <Routes>
             <Route
-              path="/accueil"
+              path="/"
               element={<Accueil meals={meals} setCart={setCart} cart={cart} />}
             />
             <Route
@@ -64,7 +64,7 @@ function App() {
               <Route path="/admin/get_orders" element={<GetOrders />} />
               <Route
                 path="/admin/order_detail/:orderId"
-                element={<OrderDetail meals={meals} />}
+                element={<OrderDetail />}
               />
 
               <Route

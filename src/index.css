@@ -31,7 +31,7 @@ html {
   margin: 10vh 0 0 0;
   font-size: clamp(1.2rem, 2vw, 1.6rem);
   background: linear-gradient(#e9c46a, #f5e6c0);
-  min-height: 110vh;
+  min-height: 80vh;
   position: relative;
 }
 .App > * {

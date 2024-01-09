@@ -1,9 +1,10 @@
-import React, { useContext, Fragment, useState } from "react";
+import React, { useContext, Fragment, useState, useEffect } from "react";
 import styled from "styled-components";
-import { UserContext } from "../../../../../utils/context";
+import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import apiUrl from "../../../../../utils/apiUrl";
 
+import { UserContext } from "../../../../../utils/context";
+import apiUrl from "../../../../../utils/apiUrl";
 import colors from "../../../../../utils/style/colors";
 
 //-----------------------------------------------------------------------------------------------
@@ -50,20 +51,29 @@ const ServerResSection = styled.p`
 `;
 //-----------------------------------------------------------------------------------------------
 
-export default function OrderDetail({ meals }) {
-	const { orders, isLoadind } = useContext(UserContext);
+export default function OrderDetail() {
+	const { orders, setOrders, isLoadind } = useContext(UserContext);
 	let { orderId } = useParams();
 	const [serverRes, setServerRes] = useState();
+	const navigate = useNavigate();
 
 	const orderData =
 		orders && orders.length > 0
 			? orders.filter((el) =>
-					Object.values(el).some((item) => item === orderId)
+					Object.values(el).some((item) => item === orderId),
 			  )
 			: [];
 
 	const SendServedOrder = () => {
-		//********** j'envoie la commande dans les historiques puis je la supprime du document "en cours" **********
+		//********** je supprime la commande de celles en cours **********
+
+		setOrders(
+			orders.filter((order) => {
+				return order.order_id !== orderId;
+			}),
+		);
+
+		//********** j'envoie la commande dans les historiques **********
 
 		fetch(apiUrl + `/miam/order/served-order`, {
 			method: "post",
@@ -78,49 +88,33 @@ export default function OrderDetail({ meals }) {
 			})
 			.catch((error) => console.error(error));
 
-		fetch(apiUrl + `/miam/order/delete-order/${orderData[0]._id}`, {
-			method: "delete",
-			headers: {
-				"Content-Type": "application/json",
-			},
-		})
-			.then((response) => response.json())
-			.then((data) => {
-				console.log(data.message);
-			})
-			.catch((error) => console.error(error));
+		navigate("/admin/get_orders");
 	};
 
 	return (
 		<>
-			{isLoadind ? (
-				<p>Loading</p>
-			) : (
-				<OrderDetailGlobalContainer>
-					{orderData?.map((el) => (
-						<OrderDetailSection key={el._id}>
-							<p>
-								Commande de <span>{el.clientName}</span>
-							</p>
-							<h3>Plats</h3>
+			<OrderDetailGlobalContainer>
+				{orderData?.map((el) => (
+					<OrderDetailSection key={el._id}>
+						<p>
+							Commande de <span>{el.clientName}</span>
+						</p>
+						<h3>Plats</h3>
 
-							<MealsContainer>
-								{el.meals.map((meal) => (
-									<li key={meal._id}>{meal.name}</li>
-								))}
-							</MealsContainer>
-							<Servir onClick={() => SendServedOrder()}>
-								Servir la commande
-							</Servir>
-							{serverRes && (
-								<ServerResSection>
-									✔ {serverRes} ✔
-								</ServerResSection>
-							)}
-						</OrderDetailSection>
-					))}
-				</OrderDetailGlobalContainer>
-			)}
+						<MealsContainer>
+							{el.meals.map((meal) => (
+								<li key={meal._id}>{meal.name}</li>
+							))}
+						</MealsContainer>
+						<Servir onClick={() => SendServedOrder()}>
+							Servir la commande
+						</Servir>
+						{serverRes && (
+							<ServerResSection>✔ {serverRes} ✔</ServerResSection>
+						)}
+					</OrderDetailSection>
+				))}
+			</OrderDetailGlobalContainer>
 		</>
 	);
 }

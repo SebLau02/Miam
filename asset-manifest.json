@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/miam/static/css/main.0dc80af3.css",
-    "main.js": "/miam/static/js/main.63b1f80c.js",
+    "main.js": "/miam/static/js/main.ce6fc890.js",
     "static/js/787.ea3f5486.chunk.js": "/miam/static/js/787.ea3f5486.chunk.js",
     "static/media/caramel-regular-webfont.woff": "/miam/static/media/caramel-regular-webfont.5551f20d5f623f1a97f9.woff",
     "static/media/caramel-regular-webfont.woff2": "/miam/static/media/caramel-regular-webfont.fcfbee55587d04c07aae.woff2",
@@ -12,11 +12,11 @@
     "index.html": "/miam/index.html",
     "static/media/delete.svg": "/miam/static/media/delete.a74863f2a6f25a3865e79620af4f3338.svg",
     "main.0dc80af3.css.map": "/miam/static/css/main.0dc80af3.css.map",
-    "main.63b1f80c.js.map": "/miam/static/js/main.63b1f80c.js.map",
+    "main.ce6fc890.js.map": "/miam/static/js/main.ce6fc890.js.map",
     "787.ea3f5486.chunk.js.map": "/miam/static/js/787.ea3f5486.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0dc80af3.css",
-    "static/js/main.63b1f80c.js"
+    "static/js/main.ce6fc890.js"
   ]
 }

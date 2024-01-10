@@ -14,7 +14,7 @@ Les parties admins sont normalement réservé à un admin, cependant pour que tu
 
 La base de données est [ici](https://github.com/SebLau02/miam-server) si tu veux y jeter un oeil.
 
-Je te laisse le découvrir [ici](https://seblau02.github.io/Miam/)
+Je te laisse le découvrir [ici](https://miam-olive.vercel.app/)
 
 ## En
 
@@ -24,7 +24,7 @@ The admin parts are normally reserved for an admin, but in order for you to acce
 
 Database is [here](https://github.com/SebLau02/miam-server) if you want to see it.
 
-To view the site, click [here](https://seblau02.github.io/Miam/)
+To view the site, click [here](https://miam-olive.vercel.app/)
 
 ### Technologies: React.Js, Node.JS
 

@@ -41,8 +41,11 @@ export default function GetOrders() {
 				<p>Aucune</p>
 			) : (
 				orders?.map((order) => (
-					<StyledLink to={`/admin/order_detail/${order.order_id}`}>
-						<OrderSection key={order._id}>
+					<StyledLink
+						to={`/admin/order_detail/${order._id}`}
+						key={order._id}
+					>
+						<OrderSection>
 							<p>Client: {order.clientName}</p>
 							<p>Table : {order.tableNumber}</p>
 						</OrderSection>

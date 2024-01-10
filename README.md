@@ -14,7 +14,7 @@ Les parties admins sont normalement réservé à un admin, cependant pour que tu
 
 La base de données est [ici](https://github.com/SebLau02/miam-server) si tu veux y jeter un oeil.
 
-Je te laisse le découvrir [ici](https://seblau02.github.io/miam/)
+Je te laisse le découvrir [ici](https://seblau02.github.io/Miam/)
 
 ## En
 
@@ -24,11 +24,12 @@ The admin parts are normally reserved for an admin, but in order for you to acce
 
 Database is [here](https://github.com/SebLau02/miam-server) if you want to see it.
 
-To view the site, click [here](https://seblau02.github.io/miam/)
+To view the site, click [here](https://seblau02.github.io/Miam/)
 
 ### Technologies: React.Js, Node.JS
 
 ### Images:
+
 <img src="src/utils/images/illustration/miam1-3.png" alt="accueil" width="800">
 <img src="src/utils/images/illustration/miam2-3.png" alt="panier" width="800">
 <img src="src/utils/images/illustration/miam3-3.png" alt="comandes en cours" width="800">

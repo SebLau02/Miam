@@ -69,9 +69,21 @@ export default function OrderDetail() {
 
 		setOrders(
 			orders.filter((order) => {
-				return order.order_id !== orderId;
+				return order._id !== orderId;
 			}),
 		);
+
+		fetch(apiUrl + `/miam/order/delete-order/${orderData[0]?._id}`, {
+			method: "delete",
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
+			.then((response) => response.json())
+			.then((data) => {
+				console.log(data.message);
+			})
+			.catch((error) => console.error(error));
 
 		//********** j'envoie la commande dans les historiques **********
 

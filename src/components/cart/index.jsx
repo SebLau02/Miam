@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import io from "socket.io-client";
 
 import apiUrl from "../../utils/apiUrl";
 
 import colors from "../../utils/style/colors";
 import Delete from "../../utils/images/delete.svg";
-
-const socket = io.connect(apiUrl);
 
 //-----------------------------------------------------------------------------------------------
 
@@ -143,20 +140,18 @@ export default function Cart({ cart, setCart }) {
 	const orderSentFunc = () => {
 		setOrderSent(true);
 
-		// socket.emit("send_message", { order });
-
-		// fetch(apiUrl + `/miam/order`, {
-		// 	method: "post",
-		// 	headers: {
-		// 		"Content-Type": "application/json",
-		// 	},
-		// 	body: JSON.stringify(order),
-		// })
-		// 	.then((response) => response.json())
-		// 	.then((data) => {
-		// 		setServerRes(data.message);
-		// 	})
-		// 	.catch((error) => console.error(error));
+		fetch(apiUrl + `/miam/order`, {
+			method: "post",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(order),
+		})
+			.then((response) => response.json())
+			.then((data) => {
+				setServerRes(data.message);
+			})
+			.catch((error) => console.error(error));
 	};
 
 	return (

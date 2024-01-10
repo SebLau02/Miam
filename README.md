@@ -30,6 +30,6 @@ To view the site, click [here](https://miam-olive.vercel.app/)
 
 ### Images:
 
-<img src="src/utils/images/illustration/miam1-3.png" alt="accueil" width="800">
-<img src="src/utils/images/illustration/miam2-3.png" alt="panier" width="800">
-<img src="src/utils/images/illustration/miam3-3.png" alt="comandes en cours" width="800">
+<img src="src/utils/images/illustration/illustration3.png" alt="lighthouse" width="800">
+<img src="src/utils/images/illustration/illustration2.png" alt="small screen" width="400">
+<img src="src/utils/images/illustration/illustration1.png" alt="laptop" width="800">

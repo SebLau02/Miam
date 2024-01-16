@@ -26,7 +26,7 @@ Database is [here](https://github.com/SebLau02/miam-server) if you want to see i
 
 To view the site, click [here](https://miam-olive.vercel.app/)
 
-### Technologies: React.Js, Node.JS
+### Technologies: React.Js
 
 ### Images:
 
